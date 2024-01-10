@@ -13,8 +13,10 @@ def scanSource(blackduck_ProjectName, blackduck_Version, blackduck_scanName, bla
     synopsys_detect detectProperties: """--detect.project.name=${blackduck_ProjectName} 
     --detect.project.version.name=${blackduck_Version} 
     --detect.code.location.name=${blackduck_scanName} 
-    --detect.source.path=${blackduck_sourcePath} 
+    --detect.source.path=${blackduck_sourcePath}
+    --detect.target.type=SOURCE
     --detect.blackduck.signature.scanner.snippet.matching=SNIPPET_MATCHING
+    --detect.blackduck.signature.scanner.individual.file.matching=ALL
     --detect.blackduck.signature.scanner.upload.source.mode=true 
     --detect.tools.excluded=BINARY_SCAN""", downloadStrategyOverride: [$class: 'ScriptOrJarDownloadStrategy']
 }
