@@ -18,6 +18,6 @@ def scanSource(blackduck_ProjectName, blackduck_Version, blackduck_scanName, bla
     --detect.blackduck.signature.scanner.snippet.matching=SNIPPET_MATCHING
     --detect.blackduck.signature.scanner.individual.file.matching=SOURCE
     --detect.blackduck.signature.scanner.upload.source.mode=true
-    --detect.tools=ALL
+    --detect.tools=DETECTOR,IAC_SCAN,SIGNATURE_SCAN
     --detect.tools.excluded=BINARY_SCAN,DOCKER,BAZEL,CONTAINER_SCAN""", downloadStrategyOverride: [$class: 'ScriptOrJarDownloadStrategy']
 }
