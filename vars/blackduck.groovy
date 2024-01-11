@@ -16,7 +16,7 @@ def scanSource(blackduck_ProjectName, blackduck_Version, blackduck_scanName, bla
     --detect.source.path=${blackduck_sourcePath}
     --detect.target.type=SOURCE
     --detect.blackduck.signature.scanner.snippet.matching=FULL_SNIPPET_MATCHING
-    --detect.blackduck.signature.scanner.individual.file.matching=ALL
+    --detect.blackduck.signature.scanner.individual.file.matching=SOURCE
     --detect.blackduck.signature.scanner.upload.source.mode=true 
     --detect.tools.excluded=BINARY_SCAN""", downloadStrategyOverride: [$class: 'ScriptOrJarDownloadStrategy']
 }
